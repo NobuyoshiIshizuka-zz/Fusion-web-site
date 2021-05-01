@@ -40,6 +40,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'fusion.urls'
@@ -129,6 +130,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+
 # Email teste console
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -145,3 +148,9 @@ DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 """
 
 LOGOUT_REDIRECT_URL = 'index'
+
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
