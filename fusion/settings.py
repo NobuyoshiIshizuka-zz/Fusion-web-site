@@ -22,6 +22,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    'core',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -29,7 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'core',
+
 ]
 
 MIDDLEWARE = [
@@ -40,7 +41,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'fusion.urls'
@@ -78,10 +78,10 @@ DATABASES = {
     }
 }
 """
-
 DATABASES = {
     'default': dj_database_url.config()
 }
+"""
 
 
 # Password validation
@@ -137,6 +137,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 """
+"""
 # Email produção
 
 EMAIL_HOST = 'localhost'
@@ -150,7 +151,3 @@ DEFAULT_FROM_EMAIL = 'contato@fusion.com.br'
 LOGOUT_REDIRECT_URL = 'index'
 
 
-# Simplified static file serving.
-# https://warehouse.python.org/project/whitenoise/
-
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
