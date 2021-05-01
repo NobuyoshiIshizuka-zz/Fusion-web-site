@@ -1,0 +1,1 @@
+web: gunicorn fucion.wsgi --log-file -
