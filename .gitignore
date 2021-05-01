@@ -1,0 +1,11 @@
+__pychace__
+
+*.*-
+
+*.pyc
+
+.env
+
+.idea
+
+template/*
